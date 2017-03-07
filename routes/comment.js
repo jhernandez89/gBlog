@@ -9,7 +9,7 @@ router.post('/', function(req, res){
     body: req.body.body,
     created_at: req.body.create_time,
     title: req.body.title,
-    user_email: req.body.user_email
+    videoLink: req.body.videoLink,
   }, 'id').then(function(result){
     res.json(result);
   });
@@ -17,7 +17,10 @@ router.post('/', function(req, res){
 //read
   router.get('/', function(req, res){
 
-    knex('comment').select().then(function(result){
+    knex('comment')
+    .join('username', 'username.id', '=', 'comment.user_id')
+    .select()
+    .then(function(result){
       res.json(result);
     });
 

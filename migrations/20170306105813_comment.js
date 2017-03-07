@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('body');
     table.timestamp("created_at").default(knex.fn.now());
-    table.string('title');
+    table.string('videoLink')
     table.integer('user_id')
       .references('username.id')
       .onDelete('CASCADE');

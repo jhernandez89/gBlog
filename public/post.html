@@ -74,9 +74,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+                        <h1 class="postTitle"></h1>
+                        <span class="meta">Posted by <span class="username"></span> on <span class="postDate"></span></span>
                     </div>
                 </div>
             </div>
@@ -88,38 +87,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+                    <p class="currentPost"></p>
 
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-                    <h2 class="section-heading">The Final Frontier</h2>
-
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-                    <h2 class="section-heading">Reaching for the Stars</h2>
-
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-                    <a href="#">
-                        <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
 
                     <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
                 </div>
@@ -128,7 +97,143 @@
     </article>
 
     <hr>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1" id="logout">
+                <div class="page-header">
+                    <h3 class="reviews">Leave your comment</h3>
+                    <div class="logout">
+                        <button class="btn btn-default btn-circle text-uppercase" type="button" onclick="$('#logout').hide(); $('#login').show()">
+                        <span class="glyphicon glyphicon-off"></span> Logout
+                    </button>
+                    </div>
+                </div>
+                <div class="comment-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#comments-logout" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Comments</h4></a></li>
+                        <li><a href="#add-comment" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Add comment</h4></a></li>
+                        <li><a href="#account-settings" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Account settings</h4></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="comments-logout">
+                            <ul class="media-list">
+                                <li class="media userComment">
+                                </li>
+                                <div class="collapse" id="replyTwo">
+                                    <ul class="media-list">
+                                        <li class="media media-replied">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jackiesaik/128.jpg" alt="profile">
+                                            </a>
+                                            <div class="media-body">
+                                                <div class="well well-lg">
+                                                    <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> Lizz</h4>
+                                                    <ul class="media-date text-uppercase reviews list-inline">
+                                                        <li class="dd">22</li>
+                                                        <li class="mm">09</li>
+                                                        <li class="aaaa">2014</li>
+                                                    </ul>
+                                                    <p class="media-comment">
+                                                        Classy!
+                                                    </p>
+                                                    <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="add-comment">
+                            <form action="#" method="post" class="form-horizontal" id="commentForm" role="form">
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 control-label">Name</label>
+                                  <div class="col-sm-10">
+                                      <input type="text" class="form-control nameInput" name="name" id="name">
+                                  </div>
+                              </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">Comment</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control uploadComment" name="addComment" id="addComment" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uploadMedia" class="col-sm-2 control-label">Upload media</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">URL</div>
+                                            <input type="text" class="form-control uploadURL" name="uploadMedia" id="uploadMedia">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-success btn-circle text-uppercase commentButton" id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="account-settings">
+                            <form action="#" method="post" class="form-horizontal" id="accountSetForm" role="form">
+                                <div class="form-group">
+                                    <label for="avatar" class="col-sm-2 control-label">Avatar</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-input-file">
+                                            <label class="uploadPhoto">
+                                            Edit
+                                            <input type="file" class="change-avatar" name="avatar" id="avatar">
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-2 control-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Vilma palma">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nickName" class="col-sm-2 control-label">Nick name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="nickName" id="nickName" placeholder="Vilma">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="vilma@mail.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword" class="col-sm-2 control-label">New password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="newPassword" id="newPassword">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="col-sm-2 control-label">Confirm password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-primary btn-circle text-uppercase" type="submit" id="submit">Save changes</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header text-center">
+            <h3 class="reviews"><span class="glyphicon glyphicon-magnet"></span> Uicomments by <a href="https://twitter.com/maridlcrmn">maridlcrmn</a></h3>
+        </div>
+        <div class="notes text-center"><small>Image credits: uifaces.com</small></div>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -167,8 +272,8 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -178,6 +283,12 @@
 
     <!-- Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
+    <script src="javascript/post.js"></script>
+    <script src="javascript/comment.js"></script>
+    <script src="javascript/postComment.js"></script>
+
+
+
 
 </body>
 
