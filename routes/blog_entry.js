@@ -9,6 +9,7 @@ router.post('/', function(req, res){
     body: req.body.body,
     created_at: req.body.create_time,
     title: req.body.title,
+    user_email: req.body.user_email
   }, 'id').then(function(result){
     res.json(result);
   });
@@ -26,8 +27,9 @@ router.post('/', function(req, res){
   });
   router.get('/:id', function(req, res){
     knex('blog_entry')
-    .join('username', 'username.id', '=', 'blog_entry.user_id')
-    .select()
+    .leftJoin('comment', 'comment.currentPost', '=', 'blog_entry.id')
+    .leftJoin('username', 'comment.user_id', '=', 'username.id')
+    .select('*', 'blog_entry.id as blog_id', 'blog_entry.body as blog_body', 'comment.body as comment_body', 'comment.created_at as comment_time', 'blog_entry.created_at as blog_time', 'username.id as id')
     .where('blog_entry.id', req.params.id)
     // .first()
     .then(function(result){

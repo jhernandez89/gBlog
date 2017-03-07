@@ -7,7 +7,8 @@ router.post('/', function(req, res){
 
   knex('username').insert({
     email: req.body.email,
-    name: req.body.name
+    name: req.body.name,
+    pagePost: +req.body.pagePost
   }, 'id').then(function(result){
     res.json(result);
   });

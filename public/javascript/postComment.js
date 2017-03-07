@@ -1,52 +1,53 @@
 // commentButton
 // uploadURL
 // uploadComment
+//
+//
+function getUrlParameter(sParam) {
+  const sPageURL = decodeURIComponent(window.location.search.substring(1));
+  const sURLVariables = sPageURL.split('&');
+  let returner;
 
+  sURLVariables.forEach((paraName) => {
+    const sParameterName = paraName.split('=');
+    if (sParameterName[0] === sParam) {
+      returner = sParameterName[1] === undefined ? false : sParameterName[1];
+    }
+  });
+  return returner;
+}
 
-function upload(){
+function upload() {
   let username = {};
   let commentData = {};
+  let email = $('.emailInput').val()
+  console.log('email: ', email);
   let url = $('.uploadURL').val()
   let name = $('.nameInput').val()
   let comment = $('.uploadComment').val()
-  console.log('URL: ',url)
-  console.log('Comment: ',comment);
-  console.log('Name: ',name);
+  let id = getUrlParameter('id');
+  console.log(id);
   commentData.videoLink = url;
-  commentData.body = url;
-  username.name = name;
-
+  commentData.body = comment;
+  commentData.currentPost = id;
+  commentData.name = name;
+  commentData.email = email;
 
   $.ajax({
-  url: '/comment',
-  method: 'POST',
-  crossDomain: true,
-  data: JSON.stringify(commentData),
-  contentType: 'application/json; charset=utf-8',
+      url: '/comment',
+      method: 'POST',
+      data: JSON.stringify(commentData),
+      contentType: 'application/json; charset=utf-8',
 
-})
-.then((response) => {
-  console.log('POST RESPONSE:',response);
-})
-.catch((response) => {
-  console.log('error');
-});
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((response) => {
+      console.log('error');
+    });
 
-$.ajax({
-url: '/username',
-method: 'POST',
-crossDomain: true,
-data: JSON.stringify(username),
-contentType: 'application/json; charset=utf-8',
-
-})
-.then((response) => {
-console.log('username response', response);
-})
-.catch((response) => {
-console.log('error');
-});
-
+    window.location.reload();
 }
 
 $('.commentButton').click(() => {
