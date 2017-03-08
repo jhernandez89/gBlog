@@ -5345,38 +5345,38 @@
  5345  cd movie-crud
  5346  ls
  5347  atom .
- 5348* npm i -S lowdb
- 5349* npm i -S knex
- 5350* knex init
- 5351* knex -h
- 5352* npm i -S pg -dev
- 5353* npm install -g
- 5354* brew install postgres
- 5355* createdb gBlog
- 5356* touch app.js
- 5357* ls
- 5358* ..
- 5359* ls
- 5360* ..
- 5361* ls
- 5362* cd weekEight
- 5363* ls
- 5364* cd knEX-
- 5365* cd knex-intro-demo
- 5366* ls
- 5367* atom .
- 5368* psql gBlog
- 5369* ..
- 5370* ls
- 5371* ..
- 5372* ls
- 5373* cd weekNine
- 5374* ls
- 5375* ..
- 5376* ls
- 5377* cd weekEight
- 5378* ls
- 5379* cd fridayProject
+ 5348  npm i -S lowdb
+ 5349  npm i -S knex
+ 5350  knex init
+ 5351  knex -h
+ 5352  npm i -S pg -dev
+ 5353  npm install -g
+ 5354  brew install postgres
+ 5355  createdb gBlog
+ 5356  touch app.js
+ 5357  ls
+ 5358  ..
+ 5359  ls
+ 5360  ..
+ 5361  ls
+ 5362  cd weekEight
+ 5363  ls
+ 5364  cd knEX-
+ 5365  cd knex-intro-demo
+ 5366  ls
+ 5367  atom .
+ 5368  psql gBlog
+ 5369  ..
+ 5370  ls
+ 5371  ..
+ 5372  ls
+ 5373  cd weekNine
+ 5374  ls
+ 5375  ..
+ 5376  ls
+ 5377  cd weekEight
+ 5378  ls
+ 5379  cd fridayProject
  5380  ..
  5381  ls
  5382  ..
@@ -5386,3 +5386,231 @@
  5386  cd gBlog
  5387  ls
  5388  mkdir routes.js
+ 5389  history > history.txt
+ 5390  ls
+ 5391  rm -rf routes.js
+ 5392  ls
+ 5393  mkdir routes
+ 5394  cd routes
+ 5395  touch gBlog.js
+ 5396  ls
+ 5397  cd galvanize
+ 5398  ls
+ 5399  cd date
+ 5400  ls
+ 5401  cd weekNine
+ 5402  ls
+ 5403  cd gBlog
+ 5404  ls
+ 5405  nodemon app.js
+ 5406  ..
+ 5407  mkdir db
+ 5408  cd db
+ 5409  touch knex.js
+ 5410  ls
+ 5411  cd galvanize
+ 5412  ls
+ 5413  cd date
+ 5414  ls
+ 5415  cd weekNine
+ 5416  ls
+ 5417  cd gBlog
+ 5418  ls
+ 5419  nodemon app.js
+ 5420  psql
+ 5421  ..
+ 5422  ls
+ 5423  knex migrate:make comment
+ 5424  knex migrate:make blog_post
+ 5425  knex migrate:make user
+ 5426  knex migrate:latest
+ 5427  knex migrate:rollback
+ 5428  knex migrate:latest
+ 5429  psql gBlog
+ 5430  ls
+ 5431  knex seed:make blog
+ 5432  ..
+ 5433  ls
+ 5434  ..
+ 5435  cd weekNine
+ 5436  ls
+ 5437  cd gBlog
+ 5438  ls
+ 5439  psql gBlog
+ 5440  knex migrate:latest
+ 5441  knex seed:make comment
+ 5442  knex seed:make user
+ 5443  knex seed:run
+ 5444  PSQL gBlog
+ 5445  ls
+ 5446  cd routes
+ 5447  ls
+ 5448  touch user.js
+ 5449  touch blogpost.js
+ 5450  knex migrate:rollback
+ 5451  knex migrate:latest
+ 5452  psql gBlog
+ 5453  knex seed:run
+ 5454  knex migrate:rollback
+ 5455  knex migrate:latest
+ 5456  knex migrate:rollback
+ 5457  knex migrate:latest
+ 5458  knex migrate:rollback
+ 5459  knex migrate:latest
+ 5460  knex migrate:rollback
+ 5461  knex migrate:latest
+ 5462  knex seed:run
+ 5463  http GET localhost:8000/post
+ 5464  ..
+ 5465  http GET localhost:8000/post
+ 5466  http GET localhost:8000
+ 5467  http GET localhost:8000 hello
+ 5468  knex seed:run
+ 5469  http GET localhost:8000/post
+ 5470  http GET localhost:8000/username
+ 5471  http GET localhost:8000/post
+ 5472  knex seed:run
+ 5473  http GET localhost:8000/post
+ 5474  knex migrate:rollback
+ 5475  knex migrate:latest
+ 5476  http GET localhost:8000/post
+ 5477  knex seed:run
+ 5478  http GET localhost:8000/post
+ 5479  http GET localhost:8000/get
+ 5480  http GET localhost:8000/comment
+ 5481  http GET localhost:8000/username
+ 5482  http GET localhost:8000/username post
+ 5483  ls
+ 5484  mkdir public
+ 5485  touch index.html
+ 5486  rm index.html
+ 5487  cd public
+ 5488  touch index.html
+ 5489  heroku apps:create gBlog
+ 5490  heroku apps:create gblog
+ 5491  heroku apps:create jblog
+ 5492  heroku apps:create
+ 5493  git add -A
+ 5494  ..
+ 5495  git add -A
+ 5496  git commit -m "html and routes"
+ 5497  touch .gitignore
+ 5498  git status
+ 5499  git add -A
+ 5500  git commit -m "html and routes"
+ 5501  git rm -fr node_modules
+ 5502  npm i
+ 5503  git add -A
+ 5504  git commit -m "html and routes"
+ 5505  git push origin master
+ 5506  git add -A
+ 5507  git commit -m "html and routes"
+ 5508  git push origin master
+ 5509  git push heroku master
+ 5510  heroku apps:create
+ 5511  git push heroku master
+ 5512  ls
+ 5513  cd public
+ 5514  mkdir javascript
+ 5515  cd javascript
+ 5516  ..
+ 5517  ls
+ 5518  heroku apps:create
+ 5519  heroku apps:create mysterious-island
+ 5520  heroku apps:create mysterious-islands
+ 5521  git push heroku master
+ 5522  git add -A
+ 5523  git commit -m "html and routes"
+ 5524  git push heroku master
+ 5525  heroku git:remote -a mysterious-islands
+ 5526  git push heroku master
+ 5527  cd javascript
+ 5528  touch index.js
+ 5529  ..
+ 5530  knex seed:run
+ 5531  knex migrate:rollback
+ 5532  knex migrate:latest
+ 5533  knex seed:run
+ 5534  knex migrate:rollback
+ 5535  knex migrate:latest
+ 5536  knex seed:run
+ 5537  ls
+ 5538  cd javascript
+ 5539  touch post.js
+ 5540  ls
+ 5541  ..
+ 5542  s
+ 5543  ..
+ 5544  ls
+ 5545  cd galvanize
+ 5546  ls
+ 5547  cd date
+ 5548  ls
+ 5549  cd weekEight
+ 5550  ls
+ 5551  cd fridayProject
+ 5552  ls
+ 5553  atom .
+ 5554  knex migrate:rollback
+ 5555  ls
+ 5556  psql
+ 5557  createdb gblog
+ 5558  ls
+ 5559  atom .
+ 5560  knex migrate:latest
+ 5561  knex seed:run
+ 5562  nodemon app.js
+ 5563  DEBUG=knex:query nodemon app.js
+ 5564  nodemon app.js
+ 5565  ls
+ 5566  cd public
+ 5567  cd javascript
+ 5568  ls
+ 5569  touch comment.js
+ 5570  knex migrate:rollback
+ 5571  knex migrate:latest
+ 5572  knex seed:run
+ 5573  psql gblog
+ 5574  ls
+ 5575  cd public
+ 5576  cd javascript
+ 5577  touch postComment.js
+ 5578  ..
+ 5579  psql gblog
+ 5580  ..
+ 5581  git add -A
+ 5582  git commit -m "routes"
+ 5583  git push origin master
+ 5584  npm install morgan
+ 5585  npm install morgan -S
+ 5586  nodemon app.js
+ 5587  cd galvanize/date/weekNine/
+ 5588  ls
+ 5589  cd gBlog
+ 5590  ls
+ 5591  nodemon app.js
+ 5592* ls
+ 5593* cd galvanize/date/weekNine/
+ 5594* ls
+ 5595* cd gBlog
+ 5596* knex seed:run
+ 5597* atom .
+ 5598* knex migrate:latest
+ 5599* knex migrate:rollback
+ 5600* knex migrate:latest
+ 5601* knex seed:run
+ 5602* knex migrate:rollback
+ 5603* knex migrate:latest
+ 5604* knex seed:run
+ 5605* knex migrate:rollback
+ 5606* knex migrate:latest
+ 5607* knex migrate:rollback
+ 5608* knex migrate:latest
+ 5609* knex seed:run
+ 5610* knex migrate:rollback
+ 5611* knex migrate:latest
+ 5612* knex seed:run
+ 5613* knex migrate:rollback
+ 5614* knex migrate:latest
+ 5615* knex seed:run
+ 5616  nodemon app.js

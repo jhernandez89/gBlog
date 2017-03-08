@@ -4,30 +4,32 @@ const knex = require('../db/knex');
 
 //create
 router.post('/', function(req, res){
-  console.log(req.body);
+console.log('commentReq: ',req.body);
   knex('username').insert({
     name: req.body.name,
     email: req.body.email,
   }, 'id').then(function(result){
-    res.json(result);
+    knex('comment').insert({
+      user_id: knex('username').where('name', req.body.name).select('id'),
+      body: req.body.body,
+      videoLink: req.body.videoLink,
+      currentPost: +req.body.currentPost,
+    }, 'id').then(function(result){
+      res.json(result);
+    });
   });
-  // knex('username'){id}
-  knex('comment').insert({
-    body: req.body.body,
-    videoLink: req.body.videoLink,
-    currentPost: +req.body.currentPost,
-  }, 'id').then(function(result){
-    res.json(result);
-  });
+
+
 });
 //read
   router.get('/', function(req, res){
 
     knex('comment')
     .leftJoin('username', 'username.id', '=', 'comment.user_id')
-    .join('blog_entry', 'comment.currentPost', '=', 'blog_entry.id')
+    .join('blog_entry', 'comment.user_id', '=', 'blog_entry.id')
     .select('comment.videoLink', 'comment.body as body', 'comment.currentPost', 'username.name',
       'comment.created_at')
+    .select('*')
     .then(function(result){
       res.json(result);
       console.log(result);

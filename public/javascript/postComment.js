@@ -30,6 +30,7 @@ function upload() {
   commentData.videoLink = url;
   commentData.body = comment;
   commentData.currentPost = id;
+  console.log(id);
   commentData.name = name;
   commentData.email = email;
 

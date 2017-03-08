@@ -1,6 +1,7 @@
 const picture = ['beemo.jpg', 'bubblegum.png', 'fin.jpg', 'flame.png', 'jakeTheDog.jpg',
                   'lemongrab.jpg', 'lumpy.jpg', 'lumpy.jpg', 'marceline.jpg',
                   'rain.gif', 'treeTrunks.png']
+
 function getUrlParameter(sParam) {
   const sPageURL = decodeURIComponent(window.location.search.substring(1));
   const sURLVariables = sPageURL.split('&');
@@ -14,14 +15,16 @@ function getUrlParameter(sParam) {
   });
   return returner;
 }
+
 function appendComments(data){
   // console.log('mydata',data);
   data.forEach((currentComment, i) => {
+    console.log(currentComment);
     let randomNumber = Math.floor((Math.random() * 10));
     let randomCharacter = picture[randomNumber]
     if(currentComment.body) {
 let comment =
-`<a class="pull-left" hretreeTrunks>
+`<a class="pull-left">
     <img class="media-object img-circle" style="width:120px;height:auto;" src="../pictures/${randomCharacter}" alt="profile">
 </a>
 <div class="media-body">
@@ -59,7 +62,7 @@ function appendPost(postData) {
   const title = postData[0].title;
   const time = postData[0].created_at;
   const name = postData[0].name;
-
+console.log('name: ',name);
   $('.postTitle').text(title);
   $('.currentPost').text(post);
   $('.postDate').text(moment(time));
@@ -69,12 +72,13 @@ function appendPost(postData) {
 
 
 function getPost() {
+  console.log('hello2');
   $.ajax({
     url: `/blog_entry/${getUrlParameter('id')}`,
     method: 'GET',
   })
   .then((response) => {
-    // console.log("responseLSJDFLJS",response);
+    console.log("responseLSJDFLJS",response);
     appendPost(response);
     // console.log('response postSDFNSLF: ',response);
   })
@@ -84,5 +88,6 @@ function getPost() {
 }
 
 $(document).ready(() => {
+  console.log('hello');
   getPost();
 });

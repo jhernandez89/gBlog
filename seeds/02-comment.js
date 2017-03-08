@@ -7,10 +7,12 @@ exports.seed = function(knex, Promise) {
       return knex('comment').insert([
         { body: 'How you doing Dr. Goats?',
           videoLink: 'https://www.youtube.com/watch?v=PRAVACbfZH0',
-          user_id: knex('username').where('name', 'Jeff').select('id') },
+          user_id: knex('username').where('name', 'Jeff').select('id'),
+          currentPost: 2},
         { body: 'Like a goat do',
           videoLink: '',
-          user_id: knex('username').where('name', 'Dr. Goats').select('id') },
+          user_id: knex('username').where('name', 'Dr. Goats').select('id'),
+          currentPost: 2},
       ]);
     });
 };

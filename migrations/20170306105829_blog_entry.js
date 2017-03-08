@@ -5,8 +5,8 @@ exports.up = function(knex, Promise) {
     table.string('body', 2000);
     table.timestamp('created_at').default(knex.fn.now());
     table.string('title');
-    table.string('username_email')
-      .references('username.email')
+    table.integer('user_id')
+      .references('username.id')
       .onDelete('CASCADE');
   });
 };
